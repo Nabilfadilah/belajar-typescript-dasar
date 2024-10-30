@@ -2,7 +2,8 @@ describe('Type Alias', function () {
     it('should support in typescript', function () {
         const category = {
             id: "1", // ini boleh string atau number
-            name: "Handphone"
+            name: "Handphone",
+            // description: "Apaan tuhh NGabbb"
         };
         const product = {
             id: "id", // ini boleh string atau number
