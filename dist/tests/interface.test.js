@@ -64,5 +64,16 @@ describe('Interface', function () {
         };
         console.info('Ini intersection type : ', domain);
     });
+    // Type Assertions - video 25
+    it('should support type interface', function () {
+        const person = {
+            name: "Eldoo",
+            age: "22"
+        };
+        // harus mengecek dengan hati2, karena datanya takut gak ada
+        const person2 = person;
+        // person2.sayHello("hasbun")
+        console.info("Type Assertions : ", person2);
+    });
 });
 export {};
