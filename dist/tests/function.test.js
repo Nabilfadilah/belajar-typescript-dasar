@@ -55,4 +55,20 @@ describe('Function', function () {
         expect(callMe(10)).toBe(100);
         expect(callMe("Nabil")).toBe("NABIL");
     });
+    // function sebagai parameter - video 29
+    it('should function as parameter', function () {
+        function sayHello(name, filter) {
+            return `Hello ${filter(name)}`;
+        }
+        function toUpper(name) {
+            return name.toUpperCase();
+        }
+        expect(sayHello("Abilan", toUpper)).toBe("Hello ABILAN");
+        // anonymous function
+        expect(sayHello("Abilan", function (name) {
+            return name.toUpperCase();
+        })).toBe("Hello ABILAN");
+        // arrow function
+        expect(sayHello("Abil", (name) => name.toUpperCase())).toBe("Hello ABIL");
+    });
 });
