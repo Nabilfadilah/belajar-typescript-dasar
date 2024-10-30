@@ -1,7 +1,7 @@
 "use strict";
 describe('Data Type', function () {
     it("should mus declare", function () {
-        const name = "Hello Nabil";
+        const name = "Hello Gordon";
         const balance = 1000;
         const isVip = true;
         console.info(name);
