@@ -94,6 +94,27 @@ describe('Interface', function () {
         }
 
         console.info(person.sayHello("Ramsayyy"))
+    })
+
+    // intersection types
+    it('should support function interface', function () {
+        interface HasName {
+            name: string
+        }
+
+        interface HasId {
+            id: string
+        }
+
+        type Domain = HasId & HasName;
+
+        const domain: Domain = {
+            id: "2",
+            name: "JIhannn"
+        }
+
+        console.info('Ini intersection type : ',domain)
     
     })
+
 })
