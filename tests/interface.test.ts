@@ -1,4 +1,5 @@
 import { Employee, Manager } from "../src/employee"
+import { Person } from "../src/person"
 import { Seller } from "../src/seller"
 
 describe('Interface', function () {
@@ -81,11 +82,6 @@ describe('Interface', function () {
     // Function di interface
     it('should support function in interface', function () {
         
-        interface Person {
-            name: string;
-            sayHello(name: string) :string;
-        }
-
         const person: Person = {
             name: "Nabill",
             sayHello: function (name: string): string {
@@ -114,7 +110,22 @@ describe('Interface', function () {
         }
 
         console.info('Ini intersection type : ',domain)
-    
+    })
+
+    // Type Assertions - video 25
+    it('should support type interface', function () {
+
+        const person: any = {
+            name: "Eldoo",
+            age: "22"
+        }
+
+        // harus mengecek dengan hati2, karena datanya takut gak ada
+        const person2 : Person = person as Person;
+        // person2.sayHello("hasbun")
+
+        console.info("Type Assertions : ", person2)
+
     })
 
 })
