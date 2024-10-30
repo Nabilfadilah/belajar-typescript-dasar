@@ -68,4 +68,25 @@ describe('Function', function () {
         expect(callMe(10)).toBe(100);
         expect(callMe("Nabil")).toBe("NABIL");
     })
+
+    // function sebagai parameter - video 29
+    it('should function as parameter', function () {
+        function sayHello(name: string, filter : (name: string) => string): string {
+            return `Hello ${filter(name)}`
+        }
+
+        function toUpper(name: string): string {
+            return name.toUpperCase()
+        }
+
+        expect(sayHello("Abilan", toUpper)).toBe("Hello ABILAN")
+
+        // anonymous function
+        expect(sayHello("Abilan", function (name: string): string {
+            return name.toUpperCase()
+        })).toBe("Hello ABILAN")
+
+        // arrow function
+        expect(sayHello("Abil", (name: string): string => name.toUpperCase())).toBe("Hello ABIL")
+    })
 })
