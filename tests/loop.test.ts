@@ -41,4 +41,23 @@ describe('Loop', function () {
             counter++;
         } while (counter < 10)
     })
+
+    // break dan continue - video 36
+    it('should support in typescript', function () {
+        
+        let counter : number = 0;
+
+        do {
+            counter++;
+            if(counter == 10) {
+                break;
+            }
+
+            if(counter % 2 == 0) {
+                continue;
+            }
+
+            console.info("break and continue : ", counter)
+        } while (true);
+    })
 })
