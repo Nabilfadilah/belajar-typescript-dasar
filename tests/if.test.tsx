@@ -20,6 +20,24 @@ describe('IT Statement', function () {
         const say = value >= 75 ? "Congratulation" : "Try Again"
 
         console.info(say)
+    })
 
+    // switch statement - video 32
+    it('should support switch statement', function () {
+        
+        function sayHello(name: string): string {
+            switch (name) {
+                case "Abil" :
+                    return "Hi Abil";
+                case "Gordon" :
+                    return "Hi Gordon";
+                default :
+                    return "HayyNgabb"
+            }
+        } 
+
+        console.info(sayHello("Abil"))
+        console.info(sayHello("Gordon"))
+        console.info(sayHello("Beta"))
     })
 })
